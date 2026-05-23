@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TecnoMarket B2B | Reportes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell compact-shell">
+    <aside class="sidebar">
+      <a class="brand-block brand-link" href="index.html">
+        <div class="brand-mark">TM</div>
+        <div class="brand-text">
+          <p class="eyebrow">Analytics B2B</p>
+          <h1>TecnoMarket</h1>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a class="nav-item" href="dashboard.html">Dashboard</a>
+        <a class="nav-item" href="order-detail.html">Detalle pedido</a>
+        <a class="nav-item" href="client-portal.html">Portal cliente</a>
+        <a class="nav-item" href="incidencias.html">Incidencias</a>
+        <a class="nav-item active" href="reportes.html">Reportes</a>
+        <a class="nav-item" href="login.html">Login</a>
+      </nav>
+
+      <section class="sidebar-card compact">
+        <p class="card-label">Periodo</p>
+        <h3>Mayo</h3>
+        <p class="muted">Corte operacional con foco en puntualidad, SLA y excepciones.</p>
+      </section>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Analitica ejecutiva</p>
+          <h2>Reportes de desempeno y cumplimiento logistico</h2>
+        </div>
+        <div class="topbar-actions">
+          <button class="ghost-button theme-toggle" type="button" data-theme-toggle aria-pressed="false"><span class="theme-toggle-icon" aria-hidden="true"></span><span>Modo claro</span></button>
+          <a class="ghost-button button-link" href="dashboard.html">Volver al dashboard</a>
+          <a class="primary-button button-link" href="client-portal.html">Compartir con cliente</a>
+        </div>
+      </header>
+
+      <section class="hero-grid">
+        <article class="hero-panel overview-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="card-label">KPIs del periodo</p>
+              <h3>Rendimiento consolidado de la operacion</h3>
+            </div>
+            <span class="live-badge">Actualizado hoy</span>
+          </div>
+
+          <div class="metrics-grid">
+            <div class="metric-card accent-cyan">
+              <p>Puntualidad</p>
+              <strong>96.4%</strong>
+              <span>+1.8 pts vs abril</span>
+            </div>
+            <div class="metric-card accent-violet">
+              <p>Pedidos procesados</p>
+              <strong>1.284</strong>
+              <span>84 cuentas activas</span>
+            </div>
+            <div class="metric-card accent-emerald">
+              <p>SLA soporte</p>
+              <strong>92%</strong>
+              <span>Dentro de objetivo</span>
+            </div>
+            <div class="metric-card accent-amber">
+              <p>Excepciones</p>
+              <strong>31</strong>
+              <span>-6 vs mes anterior</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="hero-panel route-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="card-label">Insight ejecutivo</p>
+              <h3>Desviaciones y oportunidades</h3>
+            </div>
+          </div>
+
+          <div class="insight-card highlight">
+            <span class="pill">Hallazgo clave</span>
+            <h4>Las reprogramaciones de recepcion concentran el 42% de las incidencias del mes</h4>
+            <p class="muted">El mayor impacto proviene de clientes enterprise con ventanas cerradas y cambios no sincronizados.</p>
+          </div>
+
+          <div class="message-stack notifications-stack">
+            <div class="message-card">
+              <strong>Pico de entregas</strong>
+              <p class="muted">Martes y jueves concentran la mayor carga operacional y la mayor tasa de atrasos.</p>
+            </div>
+            <div class="message-card">
+              <strong>Mejor desempeno</strong>
+              <p class="muted">La zona oriente redujo 18 minutos su ETA promedio tras ajuste de ruteo.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel tracking-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="card-label">Resumen mensual</p>
+              <h3>Evolucion por semana</h3>
+            </div>
+          </div>
+
+          <div class="message-stack">
+            <div class="message-card">
+              <strong>Semana 1</strong>
+              <p class="muted">95.2% puntualidad, 9 incidencias y 2 clientes con reprogramacion de descarga.</p>
+            </div>
+            <div class="message-card">
+              <strong>Semana 2</strong>
+              <p class="muted">96.8% puntualidad, 7 incidencias y mejora de ETA promedio en zona centro.</p>
+            </div>
+            <div class="message-card">
+              <strong>Semana 3</strong>
+              <p class="muted">97.1% puntualidad, 6 incidencias y menor tasa de tickets por soporte manual.</p>
+            </div>
+            <div class="message-card">
+              <strong>Semana 4</strong>
+              <p class="muted">96.4% puntualidad, 9 incidencias y mayor presion operativa por cierre de mes.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel notifications-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="card-label">Acciones sugeridas</p>
+              <h3>Plan de mejora</h3>
+            </div>
+          </div>
+
+          <div class="check-list">
+            <div class="check-item done">Automatizar avisos de ETA a clientes enterprise</div>
+            <div class="check-item pending">Bloquear slots de recepcion con mayor tasa de reprogramacion</div>
+            <div class="check-item pending">Publicar dashboard mensual para ejecutivos de cuenta</div>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel orders-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="card-label">Comparativo de clientes</p>
+            <h3>Cumplimiento y volumen por cuenta</h3>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Pedidos</th>
+                <th>Puntualidad</th>
+                <th>Incidencias</th>
+                <th>Satisfaccion</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Empresas Nova</td>
+                <td>128</td>
+                <td>97.2%</td>
+                <td>4</td>
+                <td>4.8/5</td>
+                <td><span class="status-chip transit">Estable</span></td>
+              </tr>
+              <tr>
+                <td>Grupo ByteLab</td>
+                <td>94</td>
+                <td>95.9%</td>
+                <td>7</td>
+                <td>4.5/5</td>
+                <td><span class="status-chip prep">Seguimiento</span></td>
+              </tr>
+              <tr>
+                <td>Industrias Vector</td>
+                <td>76</td>
+                <td>93.8%</td>
+                <td>9</td>
+                <td>4.1/5</td>
+                <td><span class="status-chip delayed">Riesgo</span></td>
+              </tr>
+              <tr>
+                <td>Clinica Datacare</td>
+                <td>58</td>
+                <td>98.1%</td>
+                <td>2</td>
+                <td>4.9/5</td>
+                <td><span class="status-chip delivered">Excelente</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

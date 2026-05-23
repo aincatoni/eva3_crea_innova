@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TecnoMarket B2B | Incidencias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell compact-shell">
+    <aside class="sidebar">
+      <a class="brand-block brand-link" href="index.html">
+        <div class="brand-mark">TM</div>
+        <div class="brand-text">
+          <p class="eyebrow">Mesa Operativa</p>
+          <h1>TecnoMarket</h1>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a class="nav-item" href="dashboard.html">Dashboard</a>
+        <a class="nav-item" href="order-detail.html">Detalle pedido</a>
+        <a class="nav-item" href="client-portal.html">Portal cliente</a>
+        <a class="nav-item active" href="incidencias.html">Incidencias</a>
+        <a class="nav-item" href="reportes.html">Reportes</a>
+        <a class="nav-item" href="login.html">Login</a>
+      </nav>
+
+      <section class="sidebar-card compact">
+        <p class="card-label">Casos abiertos</p>
+        <h3>07</h3>
+        <p class="muted">2 incidencias criticas y 5 en seguimiento con SLA vigente.</p>
+      </section>
+
+      <section class="sidebar-card">
+        <p class="card-label">Prioridades</p>
+        <ul class="alert-list">
+          <li><span class="dot warning"></span>2 bloqueos de recepcion</li>
+          <li><span class="dot success"></span>3 casos ya asignados</li>
+          <li><span class="dot info"></span>2 respuestas pendientes cliente</li>
+        </ul>
+      </section>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Centro de soporte</p>
+          <h2>Gestion de incidencias logisticas y postventa</h2>
+        </div>
+        <div class="topbar-actions">
+          <button class="ghost-button theme-toggle" type="button" data-theme-toggle aria-pressed="false"><span class="theme-toggle-icon" aria-hidden="true"></span><span>Modo claro</span></button>
+          <a class="ghost-button button-link" href="dashboard.html">Volver al dashboard</a>
+          <a class="primary-button button-link" href="mailto:soporte@tecnomarket.cl">Escalar caso</a>
+        </div>
+      </header>
+
+      <section class="detail-overview-grid">
+        <article class="panel detail-main-card">
+          <div class="panel-heading">
+            <div>
+              <p class="card-label">Resumen operativo</p>
+              <h3>Tickets con mayor riesgo de incumplimiento</h3>
+            </div>
+            <span class="status-chip delayed">Alta demanda</span>
+          </div>
+
+          <div class="detail-stats-grid">
+            <div class="info-tile">
+              <span>Criticas</span>
+              <strong>2</strong>
+            </div>
+            <div class="info-tile">
+              <span>En progreso</span>
+              <strong>4</strong>
+            </div>
+            <div class="info-tile">
+              <span>SLA promedio</span>
+              <strong>1.8 h</strong>
+            </div>
+            <div class="info-tile">
+              <span>Resueltas hoy</span>
+              <strong>5</strong>
+            </div>
+          </div>
+
+          <div class="message-stack">
+            <div class="message-card">
+              <strong>INC-204 · Empresas Nova</strong>
+              <p class="muted">Recepcion cerrada temporalmente. Se coordina nueva ventana para TM-20481.</p>
+            </div>
+            <div class="message-card">
+              <strong>INC-198 · Industrias Vector</strong>
+              <p class="muted">Desvio en ruta por congestion. Cliente solicita confirmacion formal de nuevo ETA.</p>
+            </div>
+            <div class="message-card">
+              <strong>INC-193 · Clinica Datacare</strong>
+              <p class="muted">Validacion de seriales pendiente antes de cerrar acta de entrega.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel side-inspector">
+          <div class="panel-heading">
+            <div>
+              <p class="card-label">Siguiente accion</p>
+              <h3>Runbook recomendado</h3>
+            </div>
+          </div>
+
+          <div class="check-list">
+            <div class="check-item done">Asignar responsable al ticket</div>
+            <div class="check-item done">Notificar al cliente afectado</div>
+            <div class="check-item pending">Confirmar nueva ventana de entrega</div>
+            <div class="check-item pending">Cerrar incidencia con evidencia</div>
+          </div>
+
+          <div class="insight-card highlight">
+            <span class="pill">Prioridad alta</span>
+            <h4>Empresas Nova espera actualizacion antes de las 14:20 hrs</h4>
+            <p class="muted">Si no se envia aviso dentro del SLA, el caso escala automaticamente al ejecutivo de cuenta.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel orders-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="card-label">Bandeja de tickets</p>
+            <h3>Incidencias activas por cliente y prioridad</h3>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Ticket</th>
+                <th>Cliente</th>
+                <th>Motivo</th>
+                <th>Estado</th>
+                <th>SLA</th>
+                <th>Responsable</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>INC-204</td>
+                <td>Empresas Nova</td>
+                <td>Recepcion sin disponibilidad</td>
+                <td><span class="status-chip delayed">Critica</span></td>
+                <td>00:35 h</td>
+                <td>Monica Fuentes</td>
+              </tr>
+              <tr>
+                <td>INC-198</td>
+                <td>Industrias Vector</td>
+                <td>Desvio por trafico</td>
+                <td><span class="status-chip transit">En gestion</span></td>
+                <td>01:20 h</td>
+                <td>Paula Reyes</td>
+              </tr>
+              <tr>
+                <td>INC-193</td>
+                <td>Clinica Datacare</td>
+                <td>Validacion de seriales</td>
+                <td><span class="status-chip prep">Pendiente cliente</span></td>
+                <td>03:10 h</td>
+                <td>Jorge Mena</td>
+              </tr>
+              <tr>
+                <td>INC-188</td>
+                <td>Grupo ByteLab</td>
+                <td>Reprogramacion de descarga</td>
+                <td><span class="status-chip delivered">Resuelta</span></td>
+                <td>Cerrada</td>
+                <td>Marco Diaz</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

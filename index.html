@@ -9,17 +9,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="auth-page">
+  <header class="auth-topbar">
+    <a class="brand-block brand-link topbar-brand" href="index.html">
+      <div class="brand-mark">TM</div>
+      <div class="brand-text">
+        <p class="eyebrow">B2B Access</p>
+        <h1>TecnoMarket</h1>
+      </div>
+    </a>
+    <div class="auth-topbar-actions">
+      <button class="ghost-button small theme-toggle" type="button" data-theme-toggle aria-pressed="false"><span class="theme-toggle-icon" aria-hidden="true"></span><span>Modo claro</span></button>
+      <a class="ghost-button small button-link" href="client-portal.html#help-panel">Ayuda</a>
+      <a class="ghost-button small button-link" href="dashboard.html">Ir al dashboard</a>
+    </div>
+  </header>
+
   <main class="auth-shell">
     <section class="auth-hero">
-      <div class="brand-block">
-        <div class="brand-mark">TM</div>
-        <div>
-          <p class="eyebrow">B2B Access</p>
-          <h1>TecnoMarket</h1>
-        </div>
-      </div>
-
       <div class="hero-copy">
         <p class="card-label">Plataforma de clientes</p>
         <h2>Rastrea cada pedido critico sin depender de soporte manual</h2>
@@ -45,10 +52,6 @@
         <div>
           <p class="card-label">Ingreso seguro</p>
           <h3>Inicia sesion en tu portal</h3>
-        </div>
-        <div class="topbar-actions auth-actions">
-          <a class="ghost-button small button-link" href="#help-panel">Ayuda</a>
-          <a class="ghost-button small button-link" href="dashboard.html">Ir al dashboard</a>
         </div>
       </div>
 
