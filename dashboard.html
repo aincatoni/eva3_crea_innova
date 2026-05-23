@@ -66,6 +66,7 @@
             <span>Buscar orden, cliente o guia</span>
             <input type="text" placeholder="Ej: TM-20481 / Empresas Nova" id="orderSearch">
           </label>
+          <a class="ghost-button button-link" href="#help-panel">Ayuda</a>
           <a class="ghost-button button-link" href="client-portal.html">Ver portal</a>
           <a class="primary-button button-link" href="order-detail.html">Abrir pedido</a>
         </div>
@@ -129,11 +130,30 @@
             </div>
             <div>
               <p class="muted">Llegada estimada</p>
-              <strong id="liveEta">14:35 hrs</strong>
+              <strong data-live-eta>14:35 hrs</strong>
             </div>
             <div>
               <p class="muted">Conductor</p>
               <strong>Camila Soto</strong>
+            </div>
+          </div>
+
+          <div class="progress-card">
+            <div class="progress-meta">
+              <div>
+                <p class="card-label">Barra de progreso</p>
+                <strong>Avance del pedido</strong>
+              </div>
+              <strong class="progress-value" data-progress-value>75%</strong>
+            </div>
+            <div class="progress-bar" aria-label="Progreso del pedido">
+              <span class="progress-fill" data-progress-fill style="width: 75%"></span>
+            </div>
+            <div class="progress-steps">
+              <span class="done">Confirmado</span>
+              <span class="done">Preparado</span>
+              <span class="active">En ruta</span>
+              <span>Entregado</span>
             </div>
           </div>
         </article>
@@ -175,7 +195,7 @@
               <span class="timeline-marker"></span>
               <div>
                 <strong>En ruta hacia cliente</strong>
-                <p id="routeProgressText">Vehiculo a 12 km del destino. Trafico moderado.</p>
+                <p data-route-progress>Vehiculo a 12 km del destino. Trafico moderado.</p>
               </div>
             </div>
             <div class="timeline-item pending">
@@ -188,11 +208,11 @@
           </div>
         </article>
 
-        <article class="panel insights-panel">
+        <article class="panel notifications-panel">
           <div class="panel-heading">
             <div>
-              <p class="card-label">Insights</p>
-              <h3>Resumen operativo</h3>
+              <p class="card-label">Notificaciones</p>
+              <h3>Centro de alertas recientes</h3>
             </div>
           </div>
 
@@ -202,17 +222,24 @@
             <p>Automatizar notificaciones al hito "en reparto" reduciria tickets de soporte en 28%.</p>
           </div>
 
-          <div class="mini-chart">
-            <div class="bar" style="--size: 72%"><span>Lun</span></div>
-            <div class="bar" style="--size: 88%"><span>Mar</span></div>
-            <div class="bar" style="--size: 64%"><span>Mie</span></div>
-            <div class="bar" style="--size: 93%"><span>Jue</span></div>
-            <div class="bar" style="--size: 78%"><span>Vie</span></div>
+          <div class="message-stack notifications-stack">
+            <div class="message-card">
+              <strong>14:24 hrs · TM-20481</strong>
+              <p class="muted">El cliente recibio la actualizacion de ETA y el conductor ya ingreso a la zona de entrega.</p>
+            </div>
+            <div class="message-card">
+              <strong>13:55 hrs · TM-20466</strong>
+              <p class="muted">Se detecto riesgo de atraso en Ruta 68 y se aviso al ejecutivo responsable.</p>
+            </div>
+            <div class="message-card">
+              <strong>13:20 hrs · TM-20479</strong>
+              <p class="muted">Picking finalizado y notificacion enviada al portal del cliente.</p>
+            </div>
           </div>
 
           <div class="legend-list">
-            <div><span class="legend-dot cyan"></span>Puntualidad por dia</div>
-            <div><span class="legend-dot amber"></span>Pedidos con excepcion</div>
+            <div><span class="legend-dot cyan"></span>Alertas informativas</div>
+            <div><span class="legend-dot amber"></span>Alertas con riesgo</div>
           </div>
         </article>
       </section>
@@ -296,6 +323,15 @@
           <h3>Portal de cliente</h3>
           <p class="muted">Resumen de compras, tickets y pedidos para cada empresa cliente.</p>
         </a>
+        <article class="feature-link-card" id="help-panel">
+          <p class="card-label">Ayuda</p>
+          <h3>Soporte rapido</h3>
+          <p class="muted">Canal directo para incidentes, dudas de seguimiento y validaciones de entrega.</p>
+          <div class="help-actions">
+            <a class="ghost-button small button-link" href="client-portal.html">Abrir soporte</a>
+            <a class="primary-button small button-link" href="mailto:soporte@tecnomarket.cl">Contactar</a>
+          </div>
+        </article>
       </section>
     </main>
   </div>

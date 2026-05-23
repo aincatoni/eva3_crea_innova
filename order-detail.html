@@ -41,6 +41,7 @@
           <h2>Pedido TM-20481</h2>
         </div>
         <div class="topbar-actions">
+          <a class="ghost-button button-link" href="#help-panel">Ayuda</a>
           <a class="ghost-button button-link" href="client-portal.html">Ver cliente</a>
           <a class="primary-button button-link" href="dashboard.html">Volver al dashboard</a>
         </div>
@@ -63,7 +64,7 @@
             </div>
             <div class="info-tile">
               <span>ETA</span>
-              <strong id="liveEta">14:35 hrs</strong>
+              <strong data-live-eta>14:35 hrs</strong>
             </div>
             <div class="info-tile">
               <span>Transportista</span>
@@ -81,6 +82,25 @@
             <div class="map-point start">Bodega principal</div>
             <div class="map-point hub">Control ruta</div>
             <div class="map-point end">Empresas Nova</div>
+          </div>
+
+          <div class="progress-card">
+            <div class="progress-meta">
+              <div>
+                <p class="card-label">Barra de progreso</p>
+                <strong>Estado del despacho</strong>
+              </div>
+              <strong class="progress-value" data-progress-value>75%</strong>
+            </div>
+            <div class="progress-bar" aria-label="Progreso del despacho">
+              <span class="progress-fill" data-progress-fill style="width: 75%"></span>
+            </div>
+            <div class="progress-steps">
+              <span class="done">Pedido</span>
+              <span class="done">Picking</span>
+              <span class="active">Transporte</span>
+              <span>Recepcion</span>
+            </div>
           </div>
         </article>
 
@@ -103,6 +123,17 @@
             <span class="pill">Comunicacion</span>
             <h4>Cliente notificado automaticamente</h4>
             <p class="muted">Ultimo correo enviado a las 13:58 hrs con ETA actualizado y contacto del conductor.</p>
+          </div>
+
+          <div class="message-stack notifications-stack">
+            <div class="message-card">
+              <strong>Notificacion enviada</strong>
+              <p class="muted">Cambio de ETA compartido con recepcion y compras de Empresas Nova.</p>
+            </div>
+            <div class="message-card">
+              <strong>Ayuda disponible</strong>
+              <p class="muted">Si la recepcion cambia de ventana, el equipo de soporte puede intervenir en minutos.</p>
+            </div>
           </div>
         </article>
       </section>
@@ -142,7 +173,7 @@
               <span class="timeline-marker"></span>
               <div>
                 <strong>13:59 hrs · En ruta al destino final</strong>
-                <p id="routeProgressText">Vehiculo a 12 km del destino. Trafico moderado.</p>
+                <p data-route-progress>Vehiculo a 12 km del destino. Trafico moderado.</p>
               </div>
             </div>
             <div class="timeline-item pending">
@@ -175,6 +206,16 @@
             <div class="line-item-card">
               <strong>6 x Monitor Dell 27"</strong>
               <p class="muted">Carga fraccionada y protegida para area administrativa.</p>
+            </div>
+          </div>
+
+          <div class="insight-card" id="help-panel">
+            <span class="pill">Ayuda</span>
+            <h4>Boton de ayuda operativo</h4>
+            <p class="muted">Escala incidentes, cambios de recepcion o dudas de entrega con un solo acceso.</p>
+            <div class="help-actions">
+              <a class="ghost-button small button-link" href="client-portal.html">Ver soporte</a>
+              <a class="primary-button small button-link" href="mailto:soporte@tecnomarket.cl">Solicitar ayuda</a>
             </div>
           </div>
         </article>

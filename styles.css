@@ -261,6 +261,10 @@ p {
   padding: 10px 14px;
 }
 
+.primary-button.small {
+  padding: 10px 14px;
+}
+
 .hero-grid,
 .content-grid {
   display: grid;
@@ -419,6 +423,59 @@ p {
 .timeline-item p {
   margin-top: 6px;
   color: var(--muted);
+}
+
+.progress-card {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: rgba(15, 33, 56, 0.72);
+}
+
+.progress-meta,
+.progress-steps,
+.help-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.progress-value {
+  color: #99f6e4;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  margin: 14px 0 12px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(148, 163, 184, 0.16);
+}
+
+.progress-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--cyan), var(--emerald));
+  transition: width 0.4s ease;
+}
+
+.progress-steps {
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.progress-steps .done,
+.progress-steps .active {
+  color: var(--text);
+}
+
+.progress-steps .active {
+  color: #99f6e4;
 }
 
 .insight-card {
@@ -625,7 +682,10 @@ p {
 .detail-main-card,
 .side-inspector,
 .action-hub,
-.support-panel {
+.support-panel,
+.history-panel,
+.help-panel,
+.notifications-panel {
   min-height: 100%;
 }
 
@@ -669,6 +729,10 @@ p {
   grid-template-columns: 1.2fr 0.8fr;
 }
 
+.secondary-grid {
+  margin-top: 22px;
+}
+
 .quick-actions-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 18px;
@@ -689,6 +753,20 @@ p {
   background: rgba(45, 212, 191, 0.14);
   color: #99f6e4;
   border-color: rgba(45, 212, 191, 0.32);
+}
+
+.notifications-stack {
+  margin-top: 18px;
+}
+
+.help-actions {
+  margin-top: 18px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.auth-actions {
+  justify-content: flex-end;
 }
 
 .table-wrap {
