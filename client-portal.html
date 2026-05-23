@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TecnoMarket B2B | Portal de Cliente</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell compact-shell">
+    <aside class="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">TM</div>
+        <div>
+          <p class="eyebrow">Client Portal</p>
+          <h1>TecnoMarket</h1>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a class="nav-item" href="dashboard.html">Dashboard</a>
+        <a class="nav-item" href="order-detail.html">Detalle pedido</a>
+        <a class="nav-item active" href="client-portal.html">Portal cliente</a>
+        <a class="nav-item" href="login.html">Login</a>
+      </nav>
+
+      <section class="sidebar-card compact">
+        <p class="card-label">Cuenta</p>
+        <h3>Empresas Nova</h3>
+        <p class="muted">Portal corporativo para compras y seguimiento operativo.</p>
+      </section>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Portal Autogestionado</p>
+          <h2>Hola, equipo de Empresas Nova</h2>
+        </div>
+        <div class="topbar-actions">
+          <a class="ghost-button button-link" href="login.html">Cambiar cuenta</a>
+          <a class="primary-button button-link" href="order-detail.html">Seguir pedido clave</a>
+        </div>
+      </header>
+
+      <section class="portal-hero-grid">
+        <article class="hero-panel overview-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="card-label">Resumen de cuenta</p>
+              <h3>Control de compras y entregas</h3>
+            </div>
+            <span class="live-badge">Online</span>
+          </div>
+
+          <div class="metrics-grid">
+            <div class="metric-card accent-cyan">
+              <p>Pedidos activos</p>
+              <strong>12</strong>
+              <span>4 en reparto hoy</span>
+            </div>
+            <div class="metric-card accent-violet">
+              <p>OC este mes</p>
+              <strong>31</strong>
+              <span>CLP 84.2M comprometidos</span>
+            </div>
+            <div class="metric-card accent-emerald">
+              <p>Puntualidad</p>
+              <strong>97%</strong>
+              <span>Ultimos 30 dias</span>
+            </div>
+            <div class="metric-card accent-amber">
+              <p>Tickets abiertos</p>
+              <strong>02</strong>
+              <span>1 de prioridad media</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel action-hub">
+          <div class="panel-heading">
+            <div>
+              <p class="card-label">Acciones rapidas</p>
+              <h3>Gestion diaria</h3>
+            </div>
+          </div>
+
+          <div class="quick-actions-grid">
+            <a class="feature-link-card small-card" href="order-detail.html">
+              <h4>Ver tracking</h4>
+              <p class="muted">Estado exacto y ETA.</p>
+            </a>
+            <a class="feature-link-card small-card" href="#">
+              <h4>Descargar factura</h4>
+              <p class="muted">Documentos tributarios.</p>
+            </a>
+            <a class="feature-link-card small-card" href="#">
+              <h4>Abrir ticket</h4>
+              <p class="muted">Reportar excepcion.</p>
+            </a>
+            <a class="feature-link-card small-card" href="#">
+              <h4>Repetir compra</h4>
+              <p class="muted">Basado en orden previa.</p>
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-grid portal-content-grid">
+        <article class="panel orders-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="card-label">Mis pedidos</p>
+              <h3>Pedidos recientes de la cuenta</h3>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Pedido</th>
+                  <th>Centro costo</th>
+                  <th>Estado</th>
+                  <th>Entrega</th>
+                  <th>Accion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>TM-20481</td>
+                  <td>TI Corporativo</td>
+                  <td><span class="status-chip transit">En reparto</span></td>
+                  <td>Hoy 14:35 hrs</td>
+                  <td><a class="table-link" href="order-detail.html">Ver detalle</a></td>
+                </tr>
+                <tr>
+                  <td>TM-20479</td>
+                  <td>Operaciones</td>
+                  <td><span class="status-chip prep">Preparacion</span></td>
+                  <td>Hoy 16:20 hrs</td>
+                  <td><a class="table-link" href="order-detail.html">Ver detalle</a></td>
+                </tr>
+                <tr>
+                  <td>TM-20458</td>
+                  <td>Administracion</td>
+                  <td><span class="status-chip delivered">Entregado</span></td>
+                  <td>Hoy 11:48 hrs</td>
+                  <td><a class="table-link" href="order-detail.html">Comprobante</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="panel support-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="card-label">Soporte</p>
+              <h3>Atencion y novedades</h3>
+            </div>
+          </div>
+
+          <div class="insight-card">
+            <span class="pill">Actualizacion</span>
+            <h4>Tu ejecutivo asignado ya recibio las ultimas alertas</h4>
+            <p>Monica Fuentes esta monitoreando dos pedidos de la cuenta con seguimiento prioritario.</p>
+          </div>
+
+          <div class="message-stack">
+            <div class="message-card">
+              <strong>Ticket #4832</strong>
+              <p class="muted">Cambio de ventana de recepcion solicitado.</p>
+            </div>
+            <div class="message-card">
+              <strong>Ticket #4826</strong>
+              <p class="muted">Consulta por seriales y acta de entrega.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

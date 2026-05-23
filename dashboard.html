@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TecnoMarket B2B | Tracking Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">TM</div>
+        <div>
+          <p class="eyebrow">B2B Logistics</p>
+          <h1>TecnoMarket</h1>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a class="nav-item active" href="dashboard.html">Resumen</a>
+        <a class="nav-item" href="order-detail.html">Detalle pedido</a>
+        <a class="nav-item" href="client-portal.html">Portal cliente</a>
+        <a class="nav-item" href="index.html">Login</a>
+        <a class="nav-item" href="#">Incidencias</a>
+        <a class="nav-item" href="#">Reportes</a>
+      </nav>
+
+      <section class="sidebar-card compact">
+        <p class="card-label">SLA logístico</p>
+        <h3>96.4%</h3>
+        <p class="muted">Pedidos entregados dentro de ventana comprometida esta semana.</p>
+      </section>
+
+      <section class="sidebar-card">
+        <p class="card-label">Alertas activas</p>
+        <ul class="alert-list">
+          <li>
+            <span class="dot warning"></span>
+            3 pedidos con riesgo de atraso
+          </li>
+          <li>
+            <span class="dot success"></span>
+            12 entregas confirmadas hoy
+          </li>
+          <li>
+            <span class="dot info"></span>
+            2 rutas recalculadas por trafico
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Dashboard Operativo</p>
+          <h2>Seguimiento en tiempo real de pedidos empresariales</h2>
+        </div>
+
+        <div class="topbar-actions">
+          <label class="search-bar">
+            <span>Buscar orden, cliente o guia</span>
+            <input type="text" placeholder="Ej: TM-20481 / Empresas Nova" id="orderSearch">
+          </label>
+          <a class="ghost-button button-link" href="client-portal.html">Ver portal</a>
+          <a class="primary-button button-link" href="order-detail.html">Abrir pedido</a>
+        </div>
+      </header>
+
+      <section class="hero-grid">
+        <article class="hero-panel overview-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="card-label">Estado general</p>
+              <h3>Visibilidad logística centralizada</h3>
+            </div>
+            <span class="live-badge">En vivo</span>
+          </div>
+
+          <div class="metrics-grid">
+            <div class="metric-card accent-cyan">
+              <p>Pedidos en transito</p>
+              <strong>148</strong>
+              <span>+12 vs ayer</span>
+            </div>
+            <div class="metric-card accent-violet">
+              <p>Entregas hoy</p>
+              <strong>64</strong>
+              <span>89% completadas</span>
+            </div>
+            <div class="metric-card accent-emerald">
+              <p>ETA promedio</p>
+              <strong>2.4 h</strong>
+              <span>-18 min optimizado</span>
+            </div>
+            <div class="metric-card accent-amber">
+              <p>Incidencias abiertas</p>
+              <strong>07</strong>
+              <span>2 requieren accion</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="hero-panel route-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="card-label">Ruta destacada</p>
+              <h3>Pedido prioritario TM-20481</h3>
+            </div>
+            <span class="status-chip transit">En reparto</span>
+          </div>
+
+          <div class="map-card">
+            <div class="map-grid"></div>
+            <div class="map-route route-a"></div>
+            <div class="map-point start">Bodega</div>
+            <div class="map-point hub">Hub Sur</div>
+            <div class="map-point end">Cliente</div>
+          </div>
+
+          <div class="route-summary">
+            <div>
+              <p class="muted">Destino</p>
+              <strong>Empresas Nova, Santiago</strong>
+            </div>
+            <div>
+              <p class="muted">Llegada estimada</p>
+              <strong id="liveEta">14:35 hrs</strong>
+            </div>
+            <div>
+              <p class="muted">Conductor</p>
+              <strong>Camila Soto</strong>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel tracking-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="card-label">Tracking detallado</p>
+              <h3>Linea de tiempo del pedido</h3>
+            </div>
+            <a class="ghost-button small button-link" href="order-detail.html">Ver historial</a>
+          </div>
+
+          <div class="timeline" id="timeline">
+            <div class="timeline-item done">
+              <span class="timeline-marker"></span>
+              <div>
+                <strong>Pedido confirmado</strong>
+                <p>08:10 hrs · Compra aprobada por cliente empresa.</p>
+              </div>
+            </div>
+            <div class="timeline-item done">
+              <span class="timeline-marker"></span>
+              <div>
+                <strong>Picking completado</strong>
+                <p>09:05 hrs · 42 productos preparados en centro logistico.</p>
+              </div>
+            </div>
+            <div class="timeline-item done">
+              <span class="timeline-marker"></span>
+              <div>
+                <strong>Despacho desde bodega</strong>
+                <p>10:20 hrs · Salida validada con firma digital.</p>
+              </div>
+            </div>
+            <div class="timeline-item active">
+              <span class="timeline-marker"></span>
+              <div>
+                <strong>En ruta hacia cliente</strong>
+                <p id="routeProgressText">Vehiculo a 12 km del destino. Trafico moderado.</p>
+              </div>
+            </div>
+            <div class="timeline-item pending">
+              <span class="timeline-marker"></span>
+              <div>
+                <strong>Entrega y recepcion</strong>
+                <p>Se espera validacion con codigo QR al arribo.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel insights-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="card-label">Insights</p>
+              <h3>Resumen operativo</h3>
+            </div>
+          </div>
+
+          <div class="insight-card highlight">
+            <span class="pill">Prioridad alta</span>
+            <h4>3 clientes enterprise esperan actualizacion manual</h4>
+            <p>Automatizar notificaciones al hito "en reparto" reduciria tickets de soporte en 28%.</p>
+          </div>
+
+          <div class="mini-chart">
+            <div class="bar" style="--size: 72%"><span>Lun</span></div>
+            <div class="bar" style="--size: 88%"><span>Mar</span></div>
+            <div class="bar" style="--size: 64%"><span>Mie</span></div>
+            <div class="bar" style="--size: 93%"><span>Jue</span></div>
+            <div class="bar" style="--size: 78%"><span>Vie</span></div>
+          </div>
+
+          <div class="legend-list">
+            <div><span class="legend-dot cyan"></span>Puntualidad por dia</div>
+            <div><span class="legend-dot amber"></span>Pedidos con excepcion</div>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel orders-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="card-label">Pedidos activos</p>
+            <h3>Monitoreo por cliente y compromiso de entrega</h3>
+          </div>
+          <div class="segmented-control">
+            <button class="segment active">Todos</button>
+            <button class="segment">Urgentes</button>
+            <button class="segment">Con riesgo</button>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Pedido</th>
+                <th>Cliente</th>
+                <th>Estado</th>
+                <th>Ubicacion</th>
+                <th>ETA</th>
+                <th>Responsable</th>
+              </tr>
+            </thead>
+            <tbody id="ordersTableBody">
+              <tr>
+                <td><a class="table-link" href="order-detail.html">TM-20481</a></td>
+                <td>Empresas Nova</td>
+                <td><span class="status-chip transit">En reparto</span></td>
+                <td>Sector Sur, Santiago</td>
+                <td>14:35 hrs</td>
+                <td>Camila Soto</td>
+              </tr>
+              <tr>
+                <td><a class="table-link" href="order-detail.html">TM-20479</a></td>
+                <td>Grupo ByteLab</td>
+                <td><span class="status-chip prep">Preparacion</span></td>
+                <td>Centro Logistico Norte</td>
+                <td>16:20 hrs</td>
+                <td>Marco Diaz</td>
+              </tr>
+              <tr>
+                <td><a class="table-link" href="order-detail.html">TM-20466</a></td>
+                <td>Industrias Vector</td>
+                <td><span class="status-chip delayed">Riesgo</span></td>
+                <td>Ruta 68 · Punto de control</td>
+                <td>15:50 hrs</td>
+                <td>Paula Reyes</td>
+              </tr>
+              <tr>
+                <td><a class="table-link" href="order-detail.html">TM-20458</a></td>
+                <td>Clinica Datacare</td>
+                <td><span class="status-chip delivered">Entregado</span></td>
+                <td>Las Condes</td>
+                <td>11:48 hrs</td>
+                <td>Jorge Mena</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="extra-links-grid">
+        <a class="feature-link-card" href="index.html">
+          <p class="card-label">Pantalla extra</p>
+          <h3>Acceso B2B</h3>
+          <p class="muted">Ingreso seguro para ejecutivos, clientes empresa y soporte operativo.</p>
+        </a>
+        <a class="feature-link-card" href="order-detail.html">
+          <p class="card-label">Pantalla extra</p>
+          <h3>Detalle de pedido</h3>
+          <p class="muted">Tracking extendido, hitos, documentos y evidencia de entrega.</p>
+        </a>
+        <a class="feature-link-card" href="client-portal.html">
+          <p class="card-label">Pantalla extra</p>
+          <h3>Portal de cliente</h3>
+          <p class="muted">Resumen de compras, tickets y pedidos para cada empresa cliente.</p>
+        </a>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

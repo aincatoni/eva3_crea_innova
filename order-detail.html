@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TecnoMarket B2B | Detalle de Pedido</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell compact-shell">
+    <aside class="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">TM</div>
+        <div>
+          <p class="eyebrow">Pedido 20481</p>
+          <h1>TecnoMarket</h1>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a class="nav-item" href="dashboard.html">Dashboard</a>
+        <a class="nav-item active" href="order-detail.html">Detalle pedido</a>
+        <a class="nav-item" href="client-portal.html">Portal cliente</a>
+        <a class="nav-item" href="login.html">Login</a>
+      </nav>
+
+      <section class="sidebar-card">
+        <p class="card-label">Cliente</p>
+        <h3>Empresas Nova</h3>
+        <p class="muted">Orden prioritaria con entrega coordinada en recepcion central.</p>
+      </section>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Tracking ampliado</p>
+          <h2>Pedido TM-20481</h2>
+        </div>
+        <div class="topbar-actions">
+          <a class="ghost-button button-link" href="client-portal.html">Ver cliente</a>
+          <a class="primary-button button-link" href="dashboard.html">Volver al dashboard</a>
+        </div>
+      </header>
+
+      <section class="detail-overview-grid">
+        <article class="panel detail-main-card">
+          <div class="panel-heading">
+            <div>
+              <p class="card-label">Estado actual</p>
+              <h3>Entrega en ultima milla</h3>
+            </div>
+            <span class="status-chip transit">En reparto</span>
+          </div>
+
+          <div class="detail-stats-grid">
+            <div class="info-tile">
+              <span>Destino</span>
+              <strong>Av. Apoquindo 4820, Las Condes</strong>
+            </div>
+            <div class="info-tile">
+              <span>ETA</span>
+              <strong id="liveEta">14:35 hrs</strong>
+            </div>
+            <div class="info-tile">
+              <span>Transportista</span>
+              <strong>Camila Soto</strong>
+            </div>
+            <div class="info-tile">
+              <span>Recepcionista</span>
+              <strong>Patricio Leiva</strong>
+            </div>
+          </div>
+
+          <div class="map-card large-map">
+            <div class="map-grid"></div>
+            <div class="map-route route-a"></div>
+            <div class="map-point start">Bodega principal</div>
+            <div class="map-point hub">Control ruta</div>
+            <div class="map-point end">Empresas Nova</div>
+          </div>
+        </article>
+
+        <article class="panel side-inspector">
+          <div class="panel-heading">
+            <div>
+              <p class="card-label">Documentos</p>
+              <h3>Validaciones</h3>
+            </div>
+          </div>
+
+          <div class="check-list">
+            <div class="check-item done">Orden de compra aprobada</div>
+            <div class="check-item done">Packing list generado</div>
+            <div class="check-item done">Guia de despacho emitida</div>
+            <div class="check-item pending">Firma de recepcion pendiente</div>
+          </div>
+
+          <div class="insight-card">
+            <span class="pill">Comunicacion</span>
+            <h4>Cliente notificado automaticamente</h4>
+            <p class="muted">Ultimo correo enviado a las 13:58 hrs con ETA actualizado y contacto del conductor.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-grid detail-content-grid">
+        <article class="panel tracking-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="card-label">Hitos</p>
+              <h3>Bitacora completa del pedido</h3>
+            </div>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item done">
+              <span class="timeline-marker"></span>
+              <div>
+                <strong>08:10 hrs · Pedido confirmado</strong>
+                <p>Compra de notebooks, docking stations y perifericos aprobada por el area de compras.</p>
+              </div>
+            </div>
+            <div class="timeline-item done">
+              <span class="timeline-marker"></span>
+              <div>
+                <strong>09:05 hrs · Consolidacion completada</strong>
+                <p>42 unidades verificadas con stock y numero de serie asociados.</p>
+              </div>
+            </div>
+            <div class="timeline-item done">
+              <span class="timeline-marker"></span>
+              <div>
+                <strong>11:10 hrs · Salida de centro logistico</strong>
+                <p>Despacho sellado con validacion de control de calidad y fotografia de carga.</p>
+              </div>
+            </div>
+            <div class="timeline-item active">
+              <span class="timeline-marker"></span>
+              <div>
+                <strong>13:59 hrs · En ruta al destino final</strong>
+                <p id="routeProgressText">Vehiculo a 12 km del destino. Trafico moderado.</p>
+              </div>
+            </div>
+            <div class="timeline-item pending">
+              <span class="timeline-marker"></span>
+              <div>
+                <strong>14:18 hrs · Arribo estimado</strong>
+                <p>Recepcion con QR, firma y fotografia de evidencia.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel items-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="card-label">Contenido</p>
+              <h3>Items del pedido</h3>
+            </div>
+          </div>
+
+          <div class="line-item-list">
+            <div class="line-item-card">
+              <strong>18 x Notebook Lenovo ThinkPad E14</strong>
+              <p class="muted">Seriales asociados y etiquetado por centro de costo.</p>
+            </div>
+            <div class="line-item-card">
+              <strong>18 x Docking Station USB-C</strong>
+              <p class="muted">Preparadas para entrega simultanea junto a equipos.</p>
+            </div>
+            <div class="line-item-card">
+              <strong>6 x Monitor Dell 27"</strong>
+              <p class="muted">Carga fraccionada y protegida para area administrativa.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
