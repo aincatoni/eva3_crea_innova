@@ -841,6 +841,13 @@ p {
   margin-top: 26px;
 }
 
+.auth-credit {
+  margin: 18px 4px 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-align: center;
+}
+
 .detail-overview-grid {
   grid-template-columns: 1.35fr 0.65fr;
   margin-bottom: 22px;
