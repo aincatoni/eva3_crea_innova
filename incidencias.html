@@ -11,7 +11,9 @@
 </head>
 <body>
   <div class="app-shell compact-shell">
-    <aside class="sidebar">
+    <button class="mobile-menu-overlay" type="button" data-menu-close aria-label="Cerrar menu"></button>
+
+    <aside class="sidebar dashboard-sidebar" id="incidencias-sidebar-nav" data-mobile-sidebar>
       <a class="brand-block brand-link" href="index.html">
         <div class="brand-mark">TM</div>
         <div class="brand-text">
@@ -48,6 +50,14 @@
     <main class="main-content">
       <header class="topbar">
         <div>
+          <button class="ghost-button mobile-menu-button" type="button" data-menu-toggle aria-expanded="false" aria-controls="incidencias-sidebar-nav">
+            <span class="mobile-menu-icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span>Menu</span>
+          </button>
           <p class="eyebrow">Centro de soporte</p>
           <h2>Gestion de incidencias logisticas y postventa</h2>
         </div>
@@ -185,6 +195,10 @@
       </section>
     </main>
   </div>
+
+  <footer class="page-credit">
+    <p class="auth-credit">Hecho con ❤️ por Ain, Pia, Krishna, Ingrid</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

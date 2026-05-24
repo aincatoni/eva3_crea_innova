@@ -115,6 +115,9 @@ body {
 
 .auth-page {
   padding: 20px 28px 28px;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
 }
 
 .auth-topbar {
@@ -124,8 +127,8 @@ body {
   gap: 16px;
   flex-wrap: wrap;
   padding: 14px 18px;
-  margin: 0 auto 18px;
-  max-width: 1440px;
+  margin: 0 0 18px;
+  width: 100%;
   border: 1px solid var(--border);
   border-radius: 22px;
   background: var(--panel);
@@ -751,12 +754,16 @@ p {
 
 .auth-shell {
   grid-template-columns: 1.1fr 0.9fr;
-  min-height: calc(100vh - 94px);
+  flex: 1;
+  min-height: 0;
   padding: 0;
 }
 
 .auth-hero,
 .auth-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   padding: 28px;
   border: 1px solid var(--border);
   border-radius: 32px;
@@ -846,6 +853,19 @@ p {
   color: var(--muted);
   font-size: 0.92rem;
   text-align: center;
+}
+
+.page-credit {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  padding-bottom: 14px;
+}
+
+@media (min-width: 1181px) {
+  .auth-shell {
+    min-height: calc(100dvh - 220px);
+  }
 }
 
 .detail-overview-grid {
@@ -1058,9 +1078,54 @@ th {
 }
 
 @media (max-width: 720px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .app-shell,
+  .main-content,
+  .topbar,
+  .topbar > div,
+  .topbar-actions,
+  .hero-grid,
+  .content-grid,
+  .hero-panel,
+  .panel {
+    min-width: 0;
+  }
+
   .main-content,
   .sidebar {
     padding: 18px;
+  }
+
+  .topbar h2 {
+    font-size: clamp(1.55rem, 7vw, 2rem);
+    overflow-wrap: anywhere;
+  }
+
+  .hero-panel,
+  .panel {
+    padding: 16px;
+  }
+
+  .route-summary,
+  .progress-steps {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .route-summary strong,
+  .progress-steps span {
+    font-size: 0.95rem;
+  }
+
+  .map-card,
+  .large-map {
+    min-height: 220px;
+    height: 220px;
   }
 
   .search-bar {
@@ -1089,6 +1154,10 @@ th {
 
   .auth-shell {
     padding: 18px;
+  }
+
+  .page-credit {
+    margin-top: 2px;
   }
 
   .auth-topbar {
