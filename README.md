@@ -1,4 +1,4 @@
-# TecnoMarket B2B Dashboard
+# [TecnoMarket B2B Dashboard](https://aincatoni.github.io/eva3_crea_innova/)
 
 Dashboard web orientado a la gestion logistica B2B de **TecnoMarket**, enfocado en entregar visibilidad en tiempo real del estado de pedidos empresariales, cumplimiento de SLA y gestion de incidencias.
 
@@ -35,7 +35,29 @@ Incluye:
 
 Mostrar una propuesta funcional de dashboard B2B para TecnoMarket que combine trazabilidad de pedidos, control operativo y comunicacion proactiva con clientes empresa.
 
+## Capturas de las vistas del proyecto
+
+# Vista principal / Login
+
+![alt text](image.png)
+
+# Resumen / Dashboard
+
+![alt text](image-1.png)
+
+# Detalle pedido
+
+![alt text](image-2.png)
+
+# Portal del cliente
+
+![alt text](image-3.png)
+
 ## Como visualizar el proyecto
+
+A) Puedes ver el proyecto en: https://aincatoni.github.io/eva3_crea_innova/
+
+B) Puedes ver el proyecto en tu local:
 
 1. Clona o descarga este repositorio.
 2. Abre `index.html` en tu navegador.
